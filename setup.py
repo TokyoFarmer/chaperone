@@ -31,7 +31,7 @@ def which(program):
                 return exe_file
     return None
 
-requires_list = ['docopt>=0.6.2', 'PyYAML>=3.1.1', 'voluptuous>=0.8.7', 'aiocron>=0.3']
+requires_list = ['docopt>=0.6.2', 'ruamel.yaml<=0.15', 'voluptuous>=0.8.7', 'aiocron>=0.3']
 
 if which('gcc'):
     requires_list += ["setproctitle>=1.1.8"]
