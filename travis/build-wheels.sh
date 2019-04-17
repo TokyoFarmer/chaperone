@@ -17,6 +17,6 @@ done
 
 # Install packages and test
 for PYBIN in /opt/python/cp3*/bin/; do
-    "${PYBIN}/pip" install python-manylinux-demo --no-index -f /io/wheelhouse
-    (cd "$HOME"; "${PYBIN}/nosetests" pymanylinuxdemo)
+    "${PYBIN}/pip" install chaperone --no-index -f /io/wheelhouse
+    (cd "$HOME"; "${PYBIN}/nosetests" chaperone)
 done
