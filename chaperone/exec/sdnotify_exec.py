@@ -134,13 +134,6 @@ class SDNotifyExec:
         loop.add_signal_handler(signal.SIGTERM, self._got_sig)
         loop.add_signal_handler(signal.SIGINT, self._got_sig)
 
-        proctitle = '[sdnotify-exec]'
-
-        try:
-            from setproctitle import setproctitle
-            setproctitle(proctitle)
-        except ImportError:
-            pass
 
     def info(self, msg):
         if self.verbose:

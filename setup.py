@@ -33,9 +33,6 @@ def which(program):
 
 requires_list = ['docopt>=0.6.2', 'ruamel.yaml<=0.15', 'voluptuous>=0.8.7', 'aiocron>=0.3']
 
-if which('gcc'):
-    requires_list += ["setproctitle>=1.1.8"]
-
 setup(
     name = "chaperone",
     version = get_version(),
