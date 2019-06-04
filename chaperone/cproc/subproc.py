@@ -624,7 +624,7 @@ class SubProcess(object):
             asyncio.async(self._abnormal_exit(self._proc and self._proc.returncode))
 
     def _kill_system(self):
-        self.family.controller.kill_system()
+        self.family.controller.kill_system(self.returncode)
 
     def add_pending(self, future):
         self._pending.add(future)
