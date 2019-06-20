@@ -223,7 +223,7 @@ class TopLevelProcess(objectplus):
         elif self._killing_system:
             return
 
-        if self._exitcode is None and errno is not None:
+        if self._exitcode is None and errno != 0:
             self._exitcode = 1   # default exit for an error
             self.notify.error(errno)
 
